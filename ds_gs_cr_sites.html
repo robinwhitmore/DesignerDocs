@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Welcome to Weebly Cloud for Designers! With Weebly Cloud, you use Weebly’s best-in-class website builder to create websites, blogs or online stores in minute...">
-<meta name="keywords" content="getting_started,  ">
-<title>Get Started with Weebly Cloud for Designers | Weebly Cloud for Designers Documentation</title>
+<meta name="description" content="Once a client is created, you can create and implement their site(s) from Cloud Admin. You can also create templates that you can copy to create new sites. O...">
+<meta name="keywords" content="getting_startedsites,  publish, copy, preview, template, templates, apps">
+<title>Create Sites | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -116,7 +116,7 @@
                 
                 
                 
-                <li class="active"><a href="home.html">Get Started</a></li>
+                <li><a href="home.html">Get Started</a></li>
                 
                 
                 
@@ -132,7 +132,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Get Started with Weebly Cloud for Designers page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Create Sites page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -150,7 +150,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Get Started with Weebly Cloud for Designers">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Create Sites">{title}</a></li>',
                     noResultsText: 'No results',
                             limit: 10,
                             fuzzy: true,
@@ -196,7 +196,7 @@
             
             
             
-            <li class="active"><a href="home.html">Get Started with Weebly Cloud</a></li>
+            <li><a href="home.html">Get Started with Weebly Cloud</a></li>
             
             
             
@@ -239,7 +239,7 @@
             
             
             
-            <li><a href="ds_gs_cr_sites.html">Create and Edit Sites</a></li>
+            <li class="active"><a href="ds_gs_cr_sites.html">Create and Edit Sites</a></li>
             
             
             
@@ -334,9 +334,9 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  concepts </div>
+    <div class="pageType">  concepts  task </div>
     <div class="post-header">
-        <h1 class="post-title-main">Get Started with Weebly Cloud for Designers</h1>
+        <h1 class="post-title-main">Create Sites</h1>
     </div>
 </div>
 
@@ -346,7 +346,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Welcome to Weebly Cloud for Designers! With Weebly Cloud, you use Weebly’s best-in-class website builder to create websites, blogs or online stores in minutes for your clients, while you maintain full control over billing, support, and the customer relationship.</div>
+    <div class="summary">Once a client is created, you can create and implement their site(s) from Cloud Admin. You can also create templates that you can copy to create new sites. Once the site is created, you can use the Editor to edit, preview, and publish the site.</div>
    
 
 
@@ -379,33 +379,152 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  
-<h2 id="what-is-weebly-cloud-for-designers">What is Weebly Cloud for Designers?</h2>
+  <h2 id="use-cloud-admin-to-create-sites">Use Cloud Admin to Create Sites</h2>
 
-<p>Weebly is a best-in-class website builder that allows you to create websites, blogs and online stores for your clients in minutes. You maintain full control over billing, support, and the customer relationship. You can use our <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a> to manage clients and sites and you can use our RESTful API to create custom apps to further your clients’ sites functionality.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using Cloud Admin to work with client and sites is not available to all Weebly installations. If you do not have this functionality and want more info, contact your Weebly representative.</div>
 
-<h2 id="create-a-weebly-cloud-account">Create a Weebly Cloud Account</h2>
+<p>Once you’ve created a client, you can then use Cloud Admin to create a site for that client.
+<!--TODO: add link --></p>
 
-<p>The first step in using the Weebly Cloud API is to create a Weebly Cloud account. This account gives you access to Cloud Admin where you can access your API key and secret, and download plug-ins. If you don’t have a Weebly Cloud account, then email our team <a href="mailto:bd@weebly.com">here</a>.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> You must create at least one <a href="ds_gs_plans.html">plan</a> before you can create a site.</div>
 
-<p>Once your account is set up, head on over to <a href="ds_gs_configure.html">Configure Weebly Cloud</a>  to finish setting up your account.</p>
+<p><strong>To create a site:</strong></p>
+<ol>
+  <li>In the <a href="https://weeblycloud.com/admin">Cloud Admin</a>, from the client’s detail page, in the <strong>Sites</strong> area click <strong>Add Site</strong>.</li>
+  <li>In the Add Site dialog, you must provide a title and a unique domain, and select a plan to assign to the site.</li>
+  <li>In the <strong>Site Template</strong> area, select <strong>New Site</strong> to create a new site from scratch. Or use a template or copy an existing site (more in the next sections).</li>
+  <li>Optionally, provide site settings like timezone, date format, language, and more.</li>
+  <li>Click <strong>Save</strong>.</li>
+</ol>
 
-<h2 id="test-mode">Test Mode</h2>
+<figure><img class="docimage" src="images/cl_site_create.png" alt="" /></figure>
+<p><br /></p>
 
-<p>When first getting acquainted with the Weebly Cloud API your Weebly Cloud account will be in <a data-container="body" data-toggle="popover" data-content="A mode that allows you to create test users and sites without being charged.">test mode</a>. There are no functional limitations while in test mode, it simply defaults any users and sites created to test so that you won’t be charged for them. They will be periodically removed from the system, but only after your Weebly Cloud account is in production mode.</p>
+<p>You can create contributors for the site, including the owner of the site. These are users that can either have complete access to the site or you can limit their access. Find more info here.
+<!--TODO: Add link --></p>
+<hr />
 
-<p>Once in production mode you can still create a test user by passing the optional parameter of <strong>test_mode</strong>. Learn more about the <a href="cl_api_user">User API</a>.</p>
+<h2 id="create-a-site-using-a-template">Create a Site Using a Template</h2>
 
-<h2 id="decide-where-to-host-the-weebly-sites">Decide Where to Host the Weebly Sites</h2>
+<p>Instead of creating a site from scratch, you can start with a template. Templates are sites that you’ve created to use as a starting point for new sites. For example, you might create a template for an online store and one for a portfolio site.</p>
 
-<p>As a Weebly Cloud partner, you can either host the published sites on Weebly’s infrastructure or on your own. When hosted at Weebly, all files live on the Weebly server. When you choose to host, all requests are made to your server and all static files reside on your server. But some requests require a call to a Weebly endpoint to return certain dynamic content.</p>
+<p>You can create up to 30 templates.</p>
 
-<p>In both hosting cases, the Weebly Editor (where your site owners create their sites) is hosted on Weebly. More info about hosting options can be found here.</p>
+<p><strong>To create a template:</strong>
+<!--TODO: Find out how this works w/Designers who don't really have users. Would it be a team memeber? Add links to create user/team member --></p>
+<ol>
+  <li>Optionally create a <span style="color: red">user</span> that will “own” the template sites, then create your template sites under this user. While you can create a template out of any user’s site, this is a great way to organize and manage your templates.</li>
+  <li>Create a site following the instructions above. Add elements and design your site.</li>
+  <li>Optionally add apps from the Weebly App Center . But remember that access to apps is  <a href="ds_gs_plans">based on plans</a>, so you may be restricting the potential sites that can use the template by adding apps. To avoid this, when you use the template, you can temporarily change the plan the new site is on so that it allows access to the App Center. More below.
+    <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Remember that a template is a starting point. Don’t add too many elements, or design too specifically. It may end up being more work to remove what isn’t needed than it would have been to start from scratch.</div>
+  </li>
+  <li>In the Cloud Admin, from the details page for your template site, click <strong>Add as Template</strong>.
+    <figure><img class="docimage" src="images/cl_addTemplate.png" alt="" /></figure>
+    <p><br /></p>
+  </li>
+</ol>
 
-<h2 id="use-the-weebly-editor">Use the Weebly Editor</h2>
+<p>Once added, that site appears as a template available for use when you chose to copy a site. More in the next section.</p>
 
-<p>Your customers use the <a data-container="body" data-toggle="popover" data-content="Page where you can edit your site's web pages. Developers use this to test their apps in their test site. Accessed from the Site Home page by clicking Build.">Weebly editor</a> to design their websites. It’s as easy as dragging <a data-container="body" data-toggle="popover" data-content="Elements are the widgets users drag from the editor sidebar onto a page to declaratively build their site. An app might contain one or more elements.">elements</a> from the <a data-container="body" data-toggle="popover" data-content="The sidebar of the Page Editor that holds the elements that you drag and drop onto your web page.">element tray</a> and dropping them onto a page.</p>
-<figure><img class="docimage" src="images/cl_editorBranded.png" alt="" /><figcaption>The Weebly Editor</figcaption></figure>
+<p><strong>To remove a template:</strong><br />
+If you want to stop using a site as a template, from the Site Details page, click <strong>Remove as Template</strong>.</p>
+<figure><img class="docimage" src="images/cl_remove_template.png" alt="" /></figure>
+<p><br /></p>
+
+<hr />
+
+<h2 id="copy-a-site">Copy a Site</h2>
+
+<p>Instead of creating a site from scratch, you can copy an existing one. There are two common use cases for copying a site:</p>
+<ul>
+  <li>You’ve created templates that you copy to create new sites</li>
+  <li>A client wants to create a clone of one of their existing sites</li>
+</ul>
+
+<p>When you copy a site, it copies the existing site and theme, and copies all pages and page content. Orders and members are not copied, and neither are blog posts. Products, membership settings, and any installed apps are copied. Apps will appear in the new site as they do in the original, however they will be in a disconnected state. You  will need to explicitly grant permission to reconnect the app when logging into the Editor.</p>
+<figure><img class="docimage" src="images/sh_reconnect.png" alt="" /></figure>
+
+<p>​</p>
+
+<p><strong>To copy a site:</strong></p>
+
+<ol>
+  <li>Following the steps above for creating a site in Cloud Admin.</li>
+  <li>In the Add Site dialog, scroll down to the <strong>Site Template</strong> section.</li>
+  <li>Choose to either copy a template that you’ve created or to copy an existing site for this client.
+    <figure><img class="docimage" src="images/cl_copysite.png" alt="" /></figure>
+    <p><br />
+If you choose to copy a template, a dropdown displays showin all templates that you have created. Select the one to use.</p>
+    <figure><img class="docimage" src="images/cl_createfromtemplate.png" alt="" /></figure>
+    <p><br />
+If you choose to copy an existing site, select one of the existing sites from the dropdown.</p>
+    <figure><img class="docimage" src="images/cl_copysite.png" alt="" /></figure>
+    <p><br /></p>
+  </li>
+</ol>
+
+<p>If the new site is not on a plan that allows access to the App Center, the app will work, but you will need to temporarily change the plan to connect the app.</p>
+
+<p><strong>To allow an app on a plan that doesn’t support the App Center:</strong></p>
+<ol>
+  <li>Temporarily change the site’s plan to one that has access to the App Center.</li>
+  <li>Log into the site from the Cloud Admin and in the Editor, grant the permissions for the app.</li>
+  <li>Change the plan back to the original one.</li>
+</ol>
+
+<p>Anyone editing the site will be able to manage the app, but will not be able to visit the App Center.</p>
+
+<hr />
+
+<h2 id="edit-a-site">Edit a Site</h2>
+
+<p>Once a site is created, you can edit the site one of two ways:</p>
+
+<p>From the client’s detail page of the Cloud Admin, click <strong>Login</strong>.</p>
+<figure><img class="docimage" src="images/cl_site_detail_edit.png" alt="" /></figure>
+<p><br />
+Then click <strong>Edit</strong> from the portal.</p>
+<figure><img class="docimage" src="images/cl_userPortal.png" alt="" /></figure>
+<p><br /></p>
+
+<p>Or, from the site’s detail page in the Cloud Admin, click <strong>Edit</strong>.</p>
+<figure><img class="docimage" src="images/cl_site_detail_edit.png" alt="" /></figure>
+<p><br /></p>
+
+<p>​The site opens in the Editor, where you can make any needed changes.</p>
+<figure><img class="docimage" src="images/cl_editor2.png" alt="" /></figure>
+<p><br /></p>
+
+<hr />
+
+<h2 id="preview-a-site-before-publishing">Preview a Site Before Publishing</h2>
+
+<p>You can preview how a site will appear live without publishing, from the Editor. The site displays in a preview window with a temporary URL. You can send this URL to team members or site owners so they can view the site. The URL remains valid for 30 days.</p>
+
+<p><strong>To preview a site:</strong></p>
+
+<p>In the Editor, click <strong>Preview</strong>.</p>
+<figure><img class="docimage" src="images/cl_editor2.png" alt="" /></figure>
+<p><br />
+OR, in the Cloud Admin, from the site’s detail page, click the <strong>Site Preview</strong> link.</p>
+<figure><img class="docimage" src="images/cl_site_previewlink.png" alt="" /></figure>
+<p><br />
+The site displays in a preview window. Copy the URL from here and send to the client or team member.</p>
+<figure><img class="docimage" src="images/cl_site_preview.png" alt="" /></figure>
+<p><br /></p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Blogs, Commerce, Search, Forms, and Membership do not work in preview sites.</div>
+
+<hr />
+
+<h2 id="publish-a-site">Publish a Site</h2>
+
+<p>When you publish a site, it goes live at the domain you’ve registered for the site and can be immediately accessed.</p>
+
+<p><strong>To publish a site:</strong></p>
+
+<p>From the Editor, click <strong>Publish</strong>.</p>
+<figure><img class="docimage" src="images/cl_editor2.png" alt="" /></figure>
+<p><br /></p>
 
 
 
@@ -416,6 +535,10 @@ $('#toc').on('click', 'a', function() {
         
         
         <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
+        
+        <a href="tag_sites.html" class="btn btn-default navbar-btn cursorNorm" role="button">sites</a>
         
         
         
