@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="You use Cloud Admin to create team members, which are the users at your company that can use Cloud Admin. Team members are assigned roles that determine what...">
-<meta name="keywords" content="getting_started,  Cloud Admin, users, roles">
-<title>Create Team Members | Weebly Cloud for Designers Documentation</title>
+<meta name="description" content="When a user publishes their site, the Weebly Editor displays a modal. You can customize this modal window by supplying a URL to other content.">
+<meta name="keywords" content="getting_startedsites,  sites, publish, publish modal">
+<title>Market to Your Customers in Weebly | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -132,7 +132,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Create Team Members page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Market to Your Customers in Weebly page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -150,7 +150,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Create Team Members">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Market to Your Customers in Weebly">{title}</a></li>',
                     noResultsText: 'No results',
                             limit: 10,
                             fuzzy: true,
@@ -210,7 +210,7 @@
             
             
             
-            <li class="active"><a href="ds_gs_team_members.html">Create Team Members</a></li>
+            <li><a href="ds_gs_team_members.html">Create Team Members</a></li>
             
             
             
@@ -274,7 +274,7 @@
             
             
             
-            <li><a href="ds_gs_market.html">Market to Your Customers in Weebly</a></li>
+            <li class="active"><a href="ds_gs_market.html">Market to Your Customers in Weebly</a></li>
             
             
             
@@ -322,7 +322,7 @@
         <div>
     <div class="pageType">  concepts  task </div>
     <div class="post-header">
-        <h1 class="post-title-main">Create Team Members</h1>
+        <h1 class="post-title-main">Market to Your Customers in Weebly</h1>
     </div>
 </div>
 
@@ -332,7 +332,7 @@
 <div class="post-content">
 
    
-    <div class="summary">You use Cloud Admin to create team members, which are the users at your company that can use Cloud Admin. Team members are assigned roles that determine what they can and cannot do in Cloud Admin.</div>
+    <div class="summary">When a user publishes their site, the Weebly Editor displays a modal. You can customize this modal window by supplying a URL to other content.</div>
    
 
 
@@ -365,50 +365,50 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="about-team-members">About Team Members</h2>
+  <h2 id="about-the-publish-modal">About the Publish Modal</h2>
 
-<p>​Team members are internal users that can use <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a>. You create and manage team members from the Team tab of Cloud Admin.</p>
+<p>When a user publishes a site, the Weebly editor displays a publishing modal. It displays a link to the site just published, and often Weebly displays promotional material as well.</p>
+<figure><img class="docimage" src="images/cl_promoModal.png" alt="" /><figcaption>Publish modal in the Weebly Editor</figcaption></figure>
 
-<figure><img class="docimage" src="images/cl_members.png" alt="" /><figcaption>Team member list</figcaption></figure>
-<p><br /></p>
+<p>You can use this modal window to advertise your own services by setting the publish_upsell_url to a URL where you have content published. That content loads in an iframe (640px W by 200px H) when a site is published. Here’s an example of custom content in the modal (the yellow background is for demonstration purposes only).</p>
+<figure><img class="docimage" src="images/cl_upsell_custom.png" alt="" /><figcaption>Custom content in the Publish modal</figcaption></figure>
 
-<p>Team members must have a unique email as an identifier (and is the username for logging into the Cloud Admin), and are assigned a role that determines what they can access in the portal.</p>
-<figure><img class="docimage" src="images/cl_memberCreate.png" alt="" /><figcaption>Creating a team member</figcaption></figure>
-<p><br /></p>
+<p>Because the <code class="highlighter-rouge">site_ID</code> and <code class="highlighter-rouge">user_ID</code> are passed into the upsell URL, you can dynamically override the content to display based on the user and site being published.
+ Clients are accessed using their <code class="highlighter-rouge">user_id</code>. <!--todo: is this true?-->
+Here’s an example URL in the iframe:</p>
+<p class="codeTitle">Example Publish Modal URL:</p>
 
-<h2 id="team-member-roles">Team Member Roles</h2>
-<p>When you create a team member, you must associate them with a role. Roles determine what they can and cannot do in Cloud Admin.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">iframe src="http://your-url.com/upsell.php?user_id=1234567<span class="err">&amp;</span>site_id=1234567891011234"
+style="width:100%; height:200px; margin-top:20px; overflow-x:hidden; border:none;"</code></pre></figure>
 
-<p>Here are the roles and their permissions:</p>
-<ul>
-  <li><strong>Admin</strong>: Can access all portal functionality. Can view, create, edit, and delete client and team members. Can view, create, edit, log into, and publish all websites. Can access account settings and billing information.</li>
-</ul>
+<h2 id="customize-the-publish-modal">Customize the Publish Modal</h2>
+<p>Before you can configure Weebly Cloud to use custom content in the Publish modal, you need to create it on a site that can be accessed. You can set the URL in the Cloud Admin or if you want different content displayed based on the site or user, you can set it dynamically using the Site or Account API.</p>
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> If you want a team member to have access to a specific site, then you must also create them as a <a data-container="body" data-toggle="popover" data-content="Users that are not the owners of the site, but have varying access to edit that site and some of the site's settings.">contributor</a> for that site.</div>
-<!--TODO: add link-->
-<ul>
-  <li><strong>Technical</strong>: Can access all client and site functionality, as well as account settings. Does not have access to team member or billing functionality.</li>
-  <li><strong>Support</strong>: Can view and edit clients. Has full access to site functionality. Cannot access team member, account settings or billing functionality.</li>
-  <li><strong>Editor</strong>: Can only view clients and view and edit sites. Cannot access anything else.</li>
-  <li><strong>Finance</strong>: Can only access billing functionality. Cannot access anything else.</li>
-</ul>
-<hr />
-
-<h2 id="create-a-team-member">Create a Team Member</h2>
-<p>You create team members from the Cloud Admin.</p>
-
-<p><strong>To create a team member:</strong></p>
+<p><strong>To set the URL in the Cloud Admin:</strong></p>
 <ol>
-  <li>In Cloud Admin, click the <strong>TEAM</strong> tab.</li>
-  <li>Click <strong>Add Member</strong>.</li>
-  <li>Enter a name and an email address. The address is used to log into the Cloud Admin.</li>
-  <li>Select a role.</li>
-  <li>Click <strong>Save</strong>.</li>
+  <li>Create your custom content at a URL that can be accessed by the modal.</li>
+  <li>From the <strong>Settings</strong> page of the Cloud Admin, in the Configuration area, click the <strong>Edit</strong> icon for the <strong>Upsell URL</strong>.
+    <figure><img class="docimage" src="images/cl_upsellURL.png" alt="" /><figcaption>Upsell URL on the Settings page in the Cloud Admin</figcaption></figure>
+  </li>
+  <li>Enter the URL to your custom content.</li>
 </ol>
-<figure><img class="docimage" src="images/cl_memberCreate.png" alt="" /><figcaption>Creating a team member</figcaption></figure>
-<p><br />
-When a team member is created, an email is sent with a link that allows them to create a password and log into the Cloud Admin (the email is the username). 
-<!--TODO: add link--></p>
+
+<p><strong>To set the URL dyanmically using the API:</strong></p>
+
+<p>Use the <code class="highlighter-rouge">PATCH</code> request from the Account API if you want all sites for an account to see the same content, or from the Site API if you want content to be based on the site being published. <!--todo: add links--></p>
+
+<p>Here’s a example:</p>
+<p class="codeTitle">Example CURL Request for Publish Upsell URL:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-d <span class="s1">'{
+"publish_upsell_url": "http://www.brand.com/upsell.html"
+}'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
 
 
     <div class="tags">
@@ -418,6 +418,10 @@ When a team member is created, an email is sent with a link that allows them to 
         
         
         <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
+        
+        <a href="tag_sites.html" class="btn btn-default navbar-btn cursorNorm" role="button">sites</a>
         
         
         

@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="You use Cloud Admin to create team members, which are the users at your company that can use Cloud Admin. Team members are assigned roles that determine what...">
-<meta name="keywords" content="getting_started,  Cloud Admin, users, roles">
-<title>Create Team Members | Weebly Cloud for Designers Documentation</title>
+<meta name="description" content="Plans determine what functionality a site has. If you try to access functionality not supported by the plan, a popup displays information about upgrading. If...">
+<meta name="keywords" content="getting_startedplanssites,  sites, upgrades, plans">
+<title>Handle Site Upgrades | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -132,7 +132,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Create Team Members page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Handle Site Upgrades page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -150,7 +150,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Create Team Members">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Handle Site Upgrades">{title}</a></li>',
                     noResultsText: 'No results',
                             limit: 10,
                             fuzzy: true,
@@ -210,7 +210,7 @@
             
             
             
-            <li class="active"><a href="ds_gs_team_members.html">Create Team Members</a></li>
+            <li><a href="ds_gs_team_members.html">Create Team Members</a></li>
             
             
             
@@ -267,7 +267,7 @@
             
             
             
-            <li><a href="ds_gs_upgrades.html">Handle Site Upgrades</a></li>
+            <li class="active"><a href="ds_gs_upgrades.html">Handle Site Upgrades</a></li>
             
             
             
@@ -320,9 +320,9 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  concepts  task </div>
+    <div class="pageType">  concepts  task  reference  tutorial </div>
     <div class="post-header">
-        <h1 class="post-title-main">Create Team Members</h1>
+        <h1 class="post-title-main">Handle Site Upgrades</h1>
     </div>
 </div>
 
@@ -332,7 +332,7 @@
 <div class="post-content">
 
    
-    <div class="summary">You use Cloud Admin to create team members, which are the users at your company that can use Cloud Admin. Team members are assigned roles that determine what they can and cannot do in Cloud Admin.</div>
+    <div class="summary">Plans determine what functionality a site has. If you try to access functionality not supported by the plan, a popup displays information about upgrading. If you expect your clients to be using the Weebly Editor, you need to provide the content for this popup and you need to handle the upgrade process. If clients won't be using the editor, you'll be shown the standard Weebly dialog.</div>
    
 
 
@@ -365,50 +365,46 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="about-team-members">About Team Members</h2>
+  <!--todo: not sure of the use case here. do designers need to implement upgrades? what happens if they don't? -->
+<!--todo: find out if designer needs to do this-->
+<p>​
+When a user encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window which loads a URL showing the plans they can upgrade to. You need to create this content, and then handle the upgrade.</p>
 
-<p>​Team members are internal users that can use <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a>. You create and manage team members from the Team tab of Cloud Admin.</p>
+<p>You set the upgrade URL in the Cloud Admin (or via the API) on either the Weebly Cloud Account or the Site level (in the event a different URL is set at the site and account level, the site level has the higher precedence).</p>
+<figure><img class="docimage" src="images/cl_upgrade.png" alt="" /><figcaption>Upgrade settings in the Cloud Admin</figcaption></figure>
 
-<figure><img class="docimage" src="images/cl_members.png" alt="" /><figcaption>Team member list</figcaption></figure>
-<p><br /></p>
-
-<p>Team members must have a unique email as an identifier (and is the username for logging into the Cloud Admin), and are assigned a role that determines what they can access in the portal.</p>
-<figure><img class="docimage" src="images/cl_memberCreate.png" alt="" /><figcaption>Creating a team member</figcaption></figure>
-<p><br /></p>
-
-<h2 id="team-member-roles">Team Member Roles</h2>
-<p>When you create a team member, you must associate them with a role. Roles determine what they can and cannot do in Cloud Admin.</p>
-
-<p>Here are the roles and their permissions:</p>
+<p>​When the user tries to access something requiring an upgrade, the following parameters are passed in the upgrade URL:</p>
 <ul>
-  <li><strong>Admin</strong>: Can access all portal functionality. Can view, create, edit, and delete client and team members. Can view, create, edit, log into, and publish all websites. Can access account settings and billing information.</li>
+  <li><code class="highlighter-rouge">user_id</code>: The user identification number.</li>
+  <li><code class="highlighter-rouge">site</code>: The site the user is modifying.</li>
+  <li><code class="highlighter-rouge">plan</code>: The lowest supported Weebly plan that contains the requested feature. This may be empty if the upgrade is for an element or theme that is not part of a standard Weebly plan, such as a custom element or theme.</li>
+  <li><code class="highlighter-rouge">upgrade_type</code>: Element, theme or feature.</li>
+  <li><code class="highlighter-rouge">upgrade_id</code>: The identifier for the element, theme, or feature.</li>
+  <li><code class="highlighter-rouge">plan_ids</code>: Comma separated list of all plan ids that satisfy the upgrade request.</li>
+  <li><code class="highlighter-rouge">hash</code>: A SHA1 hash of the following fields, pipe-separated:
+    <ul>
+      <li><code class="highlighter-rouge">user_id</code></li>
+      <li><code class="highlighter-rouge">site_id</code></li>
+      <li><strong>upgrade hash</strong> (the upgrade hash can be found in the Upgrade Settings section on the Settings tab of Cloud Admin - see the above image).
+Example hash: <code class="highlighter-rouge">"1234567|1234567891011234|fp16iw6bjadsubbpsok8wfze4l3cn222"</code>.</li>
+    </ul>
+  </li>
 </ul>
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> If you want a team member to have access to a specific site, then you must also create them as a <a data-container="body" data-toggle="popover" data-content="Users that are not the owners of the site, but have varying access to edit that site and some of the site's settings.">contributor</a> for that site.</div>
-<!--TODO: add link-->
-<ul>
-  <li><strong>Technical</strong>: Can access all client and site functionality, as well as account settings. Does not have access to team member or billing functionality.</li>
-  <li><strong>Support</strong>: Can view and edit clients. Has full access to site functionality. Cannot access team member, account settings or billing functionality.</li>
-  <li><strong>Editor</strong>: Can only view clients and view and edit sites. Cannot access anything else.</li>
-  <li><strong>Finance</strong>: Can only access billing functionality. Cannot access anything else.</li>
-</ul>
-<hr />
+<p class="codeTitle">Example Upgrade URL:</p>
 
-<h2 id="create-a-team-member">Create a Team Member</h2>
-<p>You create team members from the Cloud Admin.</p>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">http://your-url.com/upgrade.html?user_id<span class="o">=</span>1234567&amp;site<span class="o">=</span>1234567891011234&amp;plan<span class="o">=</span>starter&amp;upgrade_type<span class="o">=</span>feature&amp;upgrade_id<span class="o">=</span>edit_footer&amp;plan_ids<span class="o">=</span>40%2C14%2C41%2C10%2C35%2C39&amp;hash<span class="o">=</span>e71ca960fad7e87df447bb7879a27a8d14fa5a48&amp;</code></pre></figure>
 
-<p><strong>To create a team member:</strong></p>
-<ol>
-  <li>In Cloud Admin, click the <strong>TEAM</strong> tab.</li>
-  <li>Click <strong>Add Member</strong>.</li>
-  <li>Enter a name and an email address. The address is used to log into the Cloud Admin.</li>
-  <li>Select a role.</li>
-  <li>Click <strong>Save</strong>.</li>
-</ol>
-<figure><img class="docimage" src="images/cl_memberCreate.png" alt="" /><figcaption>Creating a team member</figcaption></figure>
-<p><br />
-When a team member is created, an email is sent with a link that allows them to create a password and log into the Cloud Admin (the email is the username). 
-<!--TODO: add link--></p>
+<p class="codeTitle">Upgrade Hash:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">$user_id</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">4736582015</span><span class="err">;</span><span class="w">
+</span><span class="err">$site_id</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">59705954748010</span><span class="err">;</span><span class="w">
+</span><span class="err">$upgrade_hash</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">'fp</span><span class="mi">16</span><span class="err">iw</span><span class="mi">6</span><span class="err">bjadsubbpsok</span><span class="mi">8</span><span class="err">wfze</span><span class="mi">4</span><span class="err">l</span><span class="mi">3</span><span class="err">cn</span><span class="mi">222</span><span class="err">';</span><span class="w">
+</span><span class="err">$hash</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">sha</span><span class="mi">1</span><span class="err">($user_id</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="s2">"|"</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="err">$site_id</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="s2">"|"</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="err">$upgrade_hash);</span></code></pre></figure>
+
+<p>This hash is a way for the upgrade window to verify the request is coming from the Weebly editor. You need to verify the hash by comparing it to the hash set the Settings section of Cloud Admin. Once verified, you then need to handle the purchase of the upgrade.</p>
+
+<p>Once a client has successfully purchased a new plan, you must call the Plan API to change the plan for the site. You then should display confirmation content in the popup notifying the client that their account has been upgraded. Once the popup is closed, the Weebly Editor will be refreshed and the new plan loaded.</p>
 
 
     <div class="tags">
@@ -418,6 +414,14 @@ When a team member is created, an email is sent with a link that allows them to 
         
         
         <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
+        
+        <a href="tag_plans.html" class="btn btn-default navbar-btn cursorNorm" role="button">plans</a>
+        
+        
+        
+        <a href="tag_sites.html" class="btn btn-default navbar-btn cursorNorm" role="button">sites</a>
         
         
         
