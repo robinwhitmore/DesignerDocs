@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content=" ">
-<title> | Weebly Cloud for Designers Documentation</title>
+<meta name="description" content="The Weebly Cloud Admin is where you manage your clients, their sites, and your Weebly account and installation.">
+<meta name="keywords" content="getting_started,  cloud admin, admin">
+<title>Using Weebly Cloud Admin | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the  page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Using Weebly Cloud Admin page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -154,7 +154,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Using Weebly Cloud Admin">{title}</a></li>',
                     noResultsText: 'No results',
                             limit: 10,
                             fuzzy: true,
@@ -214,7 +214,7 @@
             
             
             
-            <li><a href="ds_gs_admin.html">Use Weebly Cloud Admin</a></li>
+            <li class="active"><a href="ds_gs_admin.html">Use Weebly Cloud Admin</a></li>
             
             
             
@@ -331,9 +331,9 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType"> </div>
+    <div class="pageType">  concepts </div>
     <div class="post-header">
-        <h1 class="post-title-main"></h1>
+        <h1 class="post-title-main">Using Weebly Cloud Admin</h1>
     </div>
 </div>
 
@@ -342,6 +342,8 @@
 
 <div class="post-content">
 
+   
+    <div class="summary">The Weebly Cloud Admin is where you manage your clients, their sites, and your Weebly account and installation.</div>
    
 
 
@@ -374,28 +376,76 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <!-- new page -->
-<div id="navig">
-    <h1>Table of Contents</h1>
+  <!--Cloud Admin-->
+<p>Many of the operations needed to manage your customers’ websites are accomplished using the <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a>, including the ability to create, manage, and delete sites. You access the portal from <code class="highlighter-rouge">https://your-domain/admin</code>.</p>
 
-    
+<p><span style="color: red">Is this note true?</span></p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If your domain is a subdomain of <code class="highlighter-rouge">weeblycloud.com</code>, then you can also access the admin from <code class="highlighter-rouge">https://weeblycloud.com/admin</code>.</div>
 
+<!--TODO: add screenshot for desginer-->
 
+<p><span style="color: red">[[need to replace grpahic]]</span><!--todo: replace graphic--></p>
+<figure><img class="docimage" src="images/cl_cloudAdmin.png" alt="" /><figcaption>The Cloud Admin</figcaption></figure>
 
+<p>The tabs on the side of the portal allow you manage different parts of Weebly Cloud:
+<!--todo: verify tabs-->
+<!--todo: get screenshots--></p>
+<h2 id="clients">Clients</h2>
+<p>The Clients tab is where you <a href="ds_gs_clients">create</a> new clients, as well as browse through or search for existing clients.</p>
 
+<p><span style="color: red">[[screenshot of client tab main page]]</span></p>
 
+<p>When you click on a client name, you’re taken to the client’s detail page. Here, you can <a href="ds_gs_clients.html#manage-clients">manage</a> different aspects of the client, as well as create sites for them or log support questions.</p>
 
+<p><span style="color: red">[[screenshot of client detail page]]</span></p>
+<h2 id="team">Team</h2>
+<p>If your company has more than one person who will use the Cloud Admin, here’s where you <a href="ds_gs_team_members.html#create-a-team-member">create and manage</a> those users, called Team Members. You create and search for Team Members from the main page.</p>
 
+<p><span style="color: red">[[screenshot of team tab main page]]</span></p>
 
+<p>When you click on a member name, you navigate to their detail page, where you <a href="ds_gs_team_members.html#team-member-roles">assign a role</a> that determines the access they have in the Cloud Admin.</p>
 
+<p><span style="color: red">[[screenshot of team detail page]]</span></p>
+<h2 id="packages">Packages</h2>
+<p>The Packages tab is where you create and manage your plans. Weebly plans determine the functionality available to a site. For example, the Weebly Starter Plan doesn’t allow site search, while the other plans do. Video and audio players are only available on the Pro plan. You create your own plans and set pricing and other plan settings. Then you associate your plans with Weebly plans to determine the functionality available with each of your plans.</p>
 
-    <ul id="mysidebar" class="nav">
-        
-    </ul>
-</div>
+<p>The main Package page displays each of your plans and is where you <a href="ds_gs_plans.html#create-plans-with-cloud-admin">create</a> a plan.</p>
+
+<p><span style="color: red">[[screenshot of package main page]]</span></p>
+
+<p>Click on a plan to edit it’s configuration, including its associated Weebly plan.</p>
+
+<p><span style="color: red">[[screenshot of plan detail page]]</span></p>
+<h2 id="apps">Apps</h2>
+<p>You can develop custom apps built on the Weebly platform that you install to your client’s sites. You use the Apps tab to <a href="ds_apps_gs.html">create</a>, manage, and <a href="ds_apps_element_release.html">release</a> those apps.</p>
+
+<p><span style="color: red">[[screenshot of app detail page]]</span></p>
+
+<h2 id="themes">Themes</h2>
+<!--todo: add links to themes-->
+<p>Weebly themes provide a general structure and design palette for any website built using the Weebly editor. While Weebly provides a number of themes, you may want to create your own. You use the Themes tab to upload custom themes so that they are available to your sites.</p>
+
+<p><span style="color: red">[[screenshot of theme upload page]]</span></p>
+
+<h2 id="billing">Billing</h2>
+<p>The Billing tab allows you to <a href="ds_gs_invoice.html">view and pay</a> your Weebly invoices.</p>
+
+<p><span style="color: red">[[screenshot of billing page]]</span></p>
+
+<p>When you click an invoice, you can view its details.</p>
+
+<p><span style="color: red">[[screenshot of invoice detail page]]</span></p>
 
 
     <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
         
     </div>
 
