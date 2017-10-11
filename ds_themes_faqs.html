@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Import themes to bring them into the Weebly editor where you can edit and test them. You import themes using the Weebly UI. Export themes to create a zip fil...">
-<meta name="keywords" content="themes,  import, export, theme,">
-<title>Import and Export Themes | Weebly Cloud for Designers Documentation</title>
+<meta name="description" content="Here are answers to common questions about customizing themes for the Weebly Platform.">
+<meta name="keywords" content="troubleshootingthemes,  faq,">
+<title>Theme FAQs | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -145,7 +145,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Import and Export Themes page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Theme FAQs page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -163,7 +163,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Import and Export Themes">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Theme FAQs">{title}</a></li>',
                     noResultsText: 'No results',
                             limit: 10,
                             fuzzy: true,
@@ -380,7 +380,7 @@
             
             
             
-            <li class="active"><a href="ds_themes_import_export.html">Import and Export Themes</a></li>
+            <li><a href="ds_themes_import_export.html">Import and Export Themes</a></li>
             
             
             
@@ -537,7 +537,7 @@
             
             
             
-            <li><a href="ds_themes_faqs.html">Theme FAQs</a></li>
+            <li class="active"><a href="ds_themes_faqs.html">Theme FAQs</a></li>
             
             
             
@@ -561,9 +561,9 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  task </div>
+    <div class="pageType">  reference </div>
     <div class="post-header">
-        <h1 class="post-title-main">Import and Export Themes</h1>
+        <h1 class="post-title-main">Theme FAQs</h1>
     </div>
 </div>
 
@@ -573,7 +573,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Import themes to bring them into the Weebly editor where you can edit and test them. You import themes using the Weebly UI. Export themes to create a zip file used to distribute the theme.</div>
+    <div class="summary">Here are answers to common questions about customizing themes for the Weebly Platform.</div>
    
 
 
@@ -606,49 +606,38 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="import-a-theme-using-the-weebly-ui">Import a Theme Using the Weebly UI</h2>
+  <h2 id="what-happens-to-option-color-and-font-settings-when-a-theme-is-updated">​WHAT HAPPENS TO OPTION, COLOR, AND FONT SETTINGS WHEN A THEME IS UPDATED?</h2>
 
-<p>Weebly themes must be provided as a ZIP file (directory structure <a href="ds_themes_directory.html">here</a>). Styles must live in <code class="highlighter-rouge">main_style.css</code> or <code class="highlighter-rouge">main.less</code> (if using LESS). Make sure you’ve included all images and other assets.</p>
+<p><a href="ds_themes_options.html">Theme options</a> are set at the site level. All settings are retained after an update. However, if you make a change to an existing option, then the that option is set to the default after an update.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The zip file must contain the contents of the theme’s root directory, and NOT the root directory folder itself. If you create your zip from a source control app like GitHub, the zip may include that root folder. You’ll need to extract and then rezip only the contents (and not the root directory) before importing into Weebly.</div>
+<h2 id="can-i-force-a-theme-update-to-published-sites">CAN I FORCE A THEME UPDATE TO PUBLISHED SITES?</h2>
 
-<p><strong>​To import a theme</strong>:</p>
-<ol>
-  <li>
-    <p>Open your test site. In the Weebly editor, click the <strong>Design</strong> tab.</p>
-  </li>
-  <li>
-    <p>Click Change Theme, and at the bottom, click <strong>Import Theme</strong>.</p>
-  </li>
-  <li>
-    <p>To apply your theme to your site, go to <strong>Design &gt; Change Theme</strong>, click <strong>Custom Themes</strong>, and click <strong>Choose</strong> to apply it, or <strong>Edit</strong> to edit the theme.</p>
-  </li>
-</ol>
+<p>If you want to force theme updates to live sites, use the Site API<!--todo: API link--> to republish sites after you upload the new zip.</p>
 
-<h2 id="export-a-theme">Export a Theme</h2>
+<h2 id="will-option-settings-on-one-site-affect-another">WILL OPTION SETTINGS ON ONE SITE AFFECT ANOTHER?</h2>
 
-<p>Once you’ve completed your theme, use the Weebly editor to zip it up for you.</p>
+<p><a href="ds_themes_options.html">Theme options</a> allow site owners to personalize some aspect of the theme. These settings live in the manifest for that site and that site only, so these settings will never affect how the theme displays on another site. The same holds true for color palette and variation settings and any changes made to fonts from the Theme tab of the editor.</p>
 
-<ol>
-  <li>
-    <p>Open your test site. In the Weebly editor, click the <strong>Theme</strong> tab.</p>
-  </li>
-  <li>
-    <p>At the bottom, click <strong>Edit HTML/CSS</strong>.</p>
-  </li>
-  <li>Click <strong>Export Theme</strong>.
-    <figure><img class="docimage" src="images/theme_export.png" alt="" /><figcaption>Export a theme</figcaption></figure>
+<h2 id="will-color-palette-or-variation-settings-on-one-site-affect-another">WILL COLOR PALETTE OR VARIATION SETTINGS ON ONE SITE AFFECT ANOTHER?</h2>
 
-    <p>Your theme will be downloaded and is ready for distribution.</p>
-    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> All themes use the same default partials, which are available only in the Editor. Only customized partials are downloaded when you export a theme. So if you want to work in an external tool and want to change a partial, make a small change first in the Weebly editor, and then export the theme.</div>
-  </li>
-  <li>Use the <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a> to make the theme available to your customers.</li>
-</ol>
+<p><a href="ds_themes_palette.html">Color palette</a> and <a href="ds_themes_variations.html">variation</a> settings allow site owners to change colors used in the theme. These settings live in the manifest for that site and that site only, so these settings will never affect how the theme displays on another site. The same holds true for option settings and any changes made to fonts from the Theme tab of the editor.</p>
+
+<h2 id="what-happens-if-a-user-edits-the-theme">WHAT HAPPENS IF A USER EDITS THE THEME?</h2>
+
+<p>As long as a user has <a href="ds_gs_access_sites.html">access</a> to the Theme tab, then they can edit the theme’s files. However, as soon as they try to save those changes, the theme is forked and they are forced to save the theme with a new name, and the site will now use that new theme. No other site will be affected by their changes.</p>
+
+<h2 id="how-can-i-restrict-access-to-the-themes-tab">HOW CAN I RESTRICT ACCESS TO THE THEMES TAB?</h2>
+
+<p>Users that are owner’s of a site will always have access to the Theme tab and will be able to edit the theme. If don’t want a user to have that access, then you need to make that user a <a href="ds_gs_access_sites.html">site contributor</a> rather than the owner. When you create a contributor, make sure to limit their editor permissions. You can choose to hide the Theme tab by not selecting Theme Tab, or you can disallow just editing the theme’s files by not selecting Edit HTML/CSS.</p>
 
 
     <div class="tags">
         
         <b>Tags: </b>
+        
+        
+        
+        <a href="tag_troubleshooting.html" class="btn btn-default navbar-btn cursorNorm" role="button">troubleshooting</a>
         
         
         
