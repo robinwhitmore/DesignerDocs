@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Use the Product Option API to retrieve or update the options available for a given product.">
-<meta name="keywords" content="sites,  option, choice">
-<title>Product Option API | Weebly Cloud for Designers Documentation</title>
+<meta name="description" content="Use the Client API to create and manage clients and their sites.">
+<meta name="keywords" content="clients,  client">
+<title>Client API | Weebly Cloud for Designers Documentation</title>
 
 <link rel="shortcut icon" href="images/favicon.ico">
 
@@ -91,7 +91,7 @@
 
 
 
-  <a class="email NavLink nav-group-list-link" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Product Option API page: ' + window.location.href;">Feedback</a>
+  <a class="email NavLink nav-group-list-link" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Client API page: ' + window.location.href;">Feedback</a>
 
 </li>
 
@@ -210,8 +210,8 @@
 			            
 
 				            
-					            <li class="NavLinkLi">
-					            	<a href="ds_api_client.html" class="NavLink isSecondary">Client API</a>
+					            <li class="active isActive NavLinkLi">
+					            	<a href="ds_api_client.html" class="NavLink  isSecondary">Client API</a>
 					            </li>
 				            
 
@@ -397,8 +397,8 @@
 			            
 
 				            
-					            <li class="active isActive NavLinkLi">
-					            	<a href="ds_api_product_option.html" class="NavLink  isSecondary">Product Option API</a>
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product_option.html" class="NavLink isSecondary">Product Option API</a>
 					            </li>
 				            
 
@@ -600,7 +600,7 @@ $("li.active").parents('li').toggleClass("active");
     <div class="col-content">
         <div>
     <div class="post-header">
-        <h1 class="post-title-main display-1">Product Option API</h1>
+        <h1 class="post-title-main display-1">Client API</h1>
     </div>
     <div class="page-type">  reference </div>
 </div>
@@ -611,7 +611,7 @@ $("li.active").parents('li').toggleClass("active");
 <div class="post-content">
 
    
-    <div class="summary">Use the Product Option API to retrieve or update the options available for a given product.</div>
+    <div class="summary">Use the Client API to create and manage clients and their sites.</div>
    
 
 
@@ -647,13 +647,10 @@ $( document ).ready(function() {
 
     
 
-  <p><a href="https://hc.weebly.com/hc/en-us/articles/227067887-Add-Selectable-Options-Like-Size-or-Color-to-a-Physical-Product">Options</a> are the variations that each product SKU might have, for example color or size. Different display controls can be used to display options: a dropdown list, check boxes, or a color picker. The different values that an option can have are called option choices. For example, the option color might use a dropdown list to display the option choices of black, green, and purple. A product can have 0-n options, and an option can have 1-n option choices.</p>
-
-<p>If you want to add/change/delete the options for a product, use the <code class="highlighter-rouge">PUT</code> endpoint on the <a href="ds_api_product.html">Product API</a>. For example, if you wanted to add the color option of yellow to a product, you’d use <code class="highlighter-rouge">PUT</code> and replace skus with all the available options, including yellow. You can then use the <code class="highlighter-rouge">PATCH</code> endpoint from the Product Option API to change the order.</p>
-
+  
 <h2>Fields</h2>
 
-<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, and those that are changeable using <code class="highlighter-rouge">PATCH</code>. All fields are returned when you retrieve a single item.</p>
+<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for <code class="highlighter-rouge">PUT</code> and <code class="highlighter-rouge">POST</code>, and those that are changeable using <code class="highlighter-rouge">PATCH</code> and <code class="highlighter-rouge">PUT</code>. All fields are returned when you retrieve a single item.</p>
 <table>
     <tbody>
     <tr>
@@ -661,110 +658,85 @@ $( document ).ready(function() {
         <td><strong>Description</strong></td>
         <td><strong>Type</strong></td>
         <td><strong>List</strong></td>
+        <td><strong>Required</strong></td>
         <td><strong>Changeable</strong></td>
     </tr>
     <tr>
         <td>​<code>user_id</code></td>
         <td>The unique ID of the authenticated user</td>
         <td>string</td>
-        <td>X</td>
+        <td></td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
         <td><code>site_id</code></td>
         <td>ID of a Weebly site, unique to the currently authenticated user​</td>
         <td>string</td>
-        <td>X</td>
+        <td></td>
+        <td></td>
         <td></td>
     </tr>
 
     <tr>
-        <td><code>product_id</code></td>
-        <td>Unique ID (to this store) for the <a href="ds_api_product.html">product</a>.</td>
+        <td><code>client_id</code></td>
+        <td>description​</td>
         <td>string</td>
         <td>X</td>
         <td></td>
-    </tr>
-    <tr>
-        <td><code>product_option_id</code></td>
-        <td>​Unique ID (to this product) for this option.</td>
-        <td>integer</td>
-        <td>X</td>
         <td></td>
     </tr>
     <tr>
         <td><code>name</code></td>
-        <td>The name of this option, for example <code>Color</code> or <code>Size</code>.</td>
+        <td>description</td>
         <td>string</td>
+        <td>list</td>
         <td>X</td>
-        <td></td>
+        <td>X</td>
     </tr>
     <tr>
-        <td><code>renderer</code></td>
-        <td>The UI control used to display the choices for this option. <br />
-            Valid values are:
-            <ul>
-                <li><code>dropdown</code> (choose one)</li>
-                <li><code>color</code> (color picker)</li>
-                <li><code>radio</code> (choose many checkbox)</li>
-                <li><code>text</code> (text input)</li>
-            </ul>
-        </td>
+        <td><code>email</code></td>
+        <td>description</td>
         <td>string</td>
-        <td>X</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><code>choice_order</code></td>
-        <td>An array of values for this option, in the order that they should be displayed. Colors need to include a hex value.<br />
-            For example, if the option name is <code>Color</code>, the choice order might be: <pre>["black&lt;#000&gt;", "purple&lt;#b073da&gt;", "green&lt;#508d24&gt;"]</pre>
-            You can also add just a hex value first to have a default color display. <br />
-                For example:
-            <pre>["&lt;#000&gt;", "black&lt;#000&gt;", "purple&lt;#b073da&gt;", "green&lt;#508d24&gt;"]</pre>
-        </td>
-        <td>array</td>
+        <td>list</td>
         <td>X</td>
         <td>X</td>
     </tr>
     <tr>
-        <td><code>required</code></td>
-        <td>Whether or not an option must be selected to be purchased.<br />
-            Valid values are:
-            <ul>
-                <li><code>true</code></li>
-                <li><code>false</code></li>
-            </ul>
-        </td>
-        <td>boolean</td>
-        <td>X</td>
+        <td><code>phone</code></td>
+        <td>description</td>
+        <td>string</td>
+        <td>list</td>
         <td></td>
+        <td>X</td>
     </tr>
     <tr>
-        <td><code>max_length</code></td>
-        <td>Whether or not an option with a renderer of <code>text</code> has a maximum character length.<br />
-        Valid values are:
-            <ul>
-                <li><code>true</code></li>
-                <li><code>false</code></li>
-            </ul>
-        </td>
-        <td>boolean</td>
-        <td>X</td>
+        <td><code>note</code></td>
+        <td>description</td>
+        <td>string</td>
         <td></td>
+        <td></td>
+        <td>X</td>
     </tr>
     <tr>
         <td><code>created_date</code></td>
-        <td>Date the option was created.</td>
+      <td>Date the client was created.</td>
         <td>Unix GMT Timestamp</td>
         <td></td>
-        <td></td>
+        <td><br />
+        </td>
+        <td><br />
+        </td>
     </tr>
     <tr>
         <td><code>updated_date</code></td>
-        <td>Date the option was last updated.</td>
+      <td>Date the client was last updated.</td>
         <td>Unix GMT Timestamp</td>
-        <td>X</td>
         <td></td>
+        <td><br />
+        </td>
+        <td><br />
+        </td>
     </tr>
     </tbody>
 </table>
@@ -776,119 +748,297 @@ $( document ).ready(function() {
 <h2>
 <div class="Tag type_info">GET</div>
 
- Retrieve a List of Options for a Product
-</h2>
+ Retrieve a List of Clients</h2>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product/<span class="o">{</span>PRODUCT_ID<span class="o">}</span>/option</code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /client</code></pre></figure>
 
-<p>Returns all options for the given product. Only <code class="highlighter-rouge">list</code> fields are returned.</p>
+<p>Returns all clients for the designer. Only <code class="highlighter-rouge">list</code> fields are returned.</p>
 
-<p class="codeTitle">Example CURL request returning all options:</p>
+<h3>Query Parameters</h3>
+<p>Returned values are <a href="ds_api_about.html#pagination">paginated</a>. You can further filter results using these parameters:</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/product/123/option <span class="se">\</span>
+<table>
+    <tr>
+        <td><strong>Parameter</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+    </tr>
+    <tr>
+        <td><code>page</code></td>
+        <td>Which page of results to return. Start is <code>1</code>.
+            
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is
+            expected to be over 25, you must implement pagination.
+</div>
+
+
+        </td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>limit</code></td>
+        <td>Number of results per page to return. Default is <code>25</code>. <br />Max is <code>200</code>.</td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>query</code></td>
+        <td>Use to retrieve only pages that have a full-text match with the query string.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterby</code></td>
+        <td>Field name to set a filter on. </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterfor</code></td>
+        <td>​​​Value to search the filterby field for.<br />
+            You can use the following URL encoded operators with your <code>filterfor</code> parameter:
+            <ul>
+                <li><code>​&lt;</code>: use <code>%3C</code></li>
+                <li><code>&gt;</code>: use <code>%3E</code></li>
+                <li><code>&lt;=</code>: use <code>%3C%3D</code></li>
+                <li><code>&gt;=</code>: use <code>%3E%3D</code></li>
+                ​
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortby</code></td>
+        <td>Field name to sort by.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortdir</code></td>
+        <td>Sort direction. Valid values are:
+            <ul>
+                <li><code>asc</code></li>
+                <li><code>desc</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request returning all clients:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example filtered request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client?filterby<span class="o">=</span>phone&amp;filterfor<span class="o">=</span>555-555-5555 <span class="se">\</span>
 -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
 -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
 <p class="codeTitle">Example response:</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"product_option_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Color"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"renderer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"choice_order"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"&lt;#000&gt;"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"Black&lt;#000&gt;"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"Green&lt;#508d24&gt;"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"purple&lt;#b073da&gt;"</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"max_length"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"product_option_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Size"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"renderer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"radio"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"choice_order"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"Small"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"Medium"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"Large"</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"max_length"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client One"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientone@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654322"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Two"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clienttwo@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5556"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654323"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Three"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientthree@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5557"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
 <h2>
 <div class="Tag type_info">GET</div>
 
- Retrieve the Number of Options for a Product</h2>
+ Retrieve Details for a Client</h2>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product/<span class="o">{</span>PRODUCT_ID<span class="o">}</span>/option/count</code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /client/<span class="o">{</span>CLIENT_ID<span class="o">}</span></code></pre></figure>
 
-<p>Returns the number of options for the product.</p>
+<p>Returns all fields for the given client.</p>
 
 <p class="codeTitle">Example CURL request:</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/product/123/option/count <span class="se">\</span>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client/1 <span class="se">\</span>
 -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
 -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
 <p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the client are returned.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client One"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientone@email.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
 <h2>
-<div class="Tag type_info">GET</div>
+<div class="Tag type_warning">POST</div>
 
- Retrieve Details for a Product Option
-</h2>
+ Create a Client</h2>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product/<span class="o">{</span>PRODUCT_ID<span class="o">}</span>/option/<span class="o">{</span>PRODUCT_OPTION_ID<span class="o">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /client</code></pre></figure>
 
-<p>Returns all fields for the given product option.</p>
+<p>Creates a client.</p>
+
+<p>These fields can be created:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>email</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>phone</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>note</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+</table>
 
 <p class="codeTitle">Example CURL request:</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/product/123/option/2 <span class="se">\</span>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client <span class="se">\</span>
+-X POST <span class="se">\</span>
+-d <span class="s1">'{
+      "name": "New Client",
+      "email": "newclient@email.com",
+      "phone": "555-555-5559"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
 -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
 -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
 <p class="codeTitle">Example response:</p>
-<p>See Fields table. All fields for the option are returned.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"product_option_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Size"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"renderer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"radio"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"choice_order"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="s2">"Small"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"Medium"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"Large"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"max_length"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Client"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newclient@email.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5559"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">         </span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PUT</div>
+
+ Replace a Client</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /client/<span class="o">{</span>CLIENT_ID<span class="o">}</span></code></pre></figure>
+
+<p>Replaces the given client.</p>
+
+<p>These fields can be replaced:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>email</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>phone</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>note</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client/1 <span class="se">\</span>
+-X PUT <span class="se">\</span>
+-d <span class="s1">'{
+      "name": "New Client One"
+      "email": newclientone@email.com
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Client One"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newclientone@email.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
 <h2>
 <div class="Tag type_warning">PATCH</div>
 
- Update a Product Option</h2>
+ Update a Client</h2>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product/<span class="o">{</span>PRODUCT_ID<span class="o">}</span>/option/<span class="o">{</span>PRODUCT_OPTION_ID<span class="o">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /client/<span class="o">{</span>CLIENT_ID<span class="o">}</span></code></pre></figure>
 
-<p>Updates the given product option.</p>
+<p>Updates the given client.</p>
 
 <p>These fields can be updated:</p>
 
@@ -898,46 +1048,50 @@ $( document ).ready(function() {
         <td><strong>Description</strong></td>
         <td><strong>Type</strong></td>
     </tr>
-    <tr>
-        <td><code>choice_order</code></td>
-        <td>An array of values for this option, in the order that they should be displayed. Colors need to include a hex value.<br />
-            For example, if the option name is <code>Color</code>, the choice order might be: <pre>["black&lt;#000&gt;", "purple&lt;#b073da&gt;", "green&lt;#508d24&gt;"]</pre>
-            You can also add just a hex value first to have a default color display. <br />
-            For example:
-            <pre>["&lt;#000&gt;", "black&lt;#000&gt;", "purple&lt;#b073da&gt;", "green&lt;#508d24&gt;"]</pre>
-        </td>
-        <td>array</td>
-    </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>description</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>email</code></td>
+    <td>description</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>phone</code></td>
+    <td>description</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>note</code></td>
+    <td>description</td>
+    <td>string</td>
+  </tr>
 </table>
 
 <p class="codeTitle">Example CURL request:</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/987654321/site/123456/store/product/123/option/2 <span class="se">\</span>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client/2 <span class="se">\</span>
 -X PATCH <span class="se">\</span>
 -d <span class="s1">'{
-        "choice_order": ["Large","Medium","Small"]
+      "note": "A new note."
     }'</span> <span class="se">\</span>
 -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
 -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
 -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
 <p class="codeTitle">Example response:</p>
-<p>See Fields table. All fields for the product option are returned.&lt;/p&gt;</p>
+<p>See Fields table. All fields for the client are returned.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"product_option_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Size"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"renderer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"radio"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"choice_order"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="s2">"Large"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"Medium"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"Small"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"max_length"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654322"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Two"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clienttwo@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5556"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A new note."</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
 
@@ -949,7 +1103,7 @@ $( document ).ready(function() {
 	        
 				
 		        
-		        	<a href="tag_sites.html" class="btn btn-default navbar-btn" role="button">sites</a>
+		        	<a href="tag_clients.html" class="btn btn-default navbar-btn" role="button">clients</a>
 		        
 	        
         
