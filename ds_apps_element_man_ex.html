@@ -38,9 +38,9 @@
 
 <div class="top-nav">
 
-  <a href="/" class="top-nav-item">
-    <img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" />
-  </a>
+	<div class="top-nav-item">
+		<img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" role="button" tabindex="0" alt="menu"/>
+	</div>
 
 	<div class="top-nav-item">
 		<img class="mobile-nav-btn" src="images/icons/mobile-menu.svg" alt="">
@@ -610,8 +610,6 @@ $("li.active").parents('li').toggleClass("active");
     <div class="summary">The following example shows the manifest from the Pricing Chart sample element. This manifest contains both application-level manifest data and element manifest data. The element-specific information lives within the objects in the "elements" array.</div>
    
 
-
-
     
     <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
 <script>
@@ -639,7 +637,6 @@ $( document ).ready(function() {
 <div id="toc" class="toc"></div>
 
     
-
 
     
 
@@ -791,13 +788,15 @@ $( document ).ready(function() {
 
     <div class="tags">
         
-	        Tags<br />
+            Tags:<br/>
 	        
-	        
-				
+
+            
+
+                
+		        	<a href="tag_elements.html" class="btn btn-default navbar-btn cursorNorm tags-link" role="button">elements</a>
 		        
-		        	<a href="tag_elements.html" class="btn btn-default navbar-btn" role="button">elements</a>
-		        
+
 	        
         
     </div>
@@ -813,7 +812,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Nov 8, 2017
+				 Site last generated: Nov 9, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

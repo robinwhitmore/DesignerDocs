@@ -20,11 +20,6 @@
       }
       return this.id;
     }), output = $(this);
-
-    headers.each(function(idx, header){
-      header.id = header.id.replace(/\s+/g, '');
-    })
-
     if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
       return;
     }

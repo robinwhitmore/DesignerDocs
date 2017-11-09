@@ -38,9 +38,9 @@
 
 <div class="top-nav">
 
-  <a href="/" class="top-nav-item">
-    <img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" />
-  </a>
+	<div class="top-nav-item">
+		<img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" role="button" tabindex="0" alt="menu"/>
+	</div>
 
 	<div class="top-nav-item">
 		<img class="mobile-nav-btn" src="images/icons/mobile-menu.svg" alt="">
@@ -614,8 +614,6 @@ $("li.active").parents('li').toggleClass("active");
     <div class="summary">Use the Site API to manage sites, including the ability to create, update, publish, disable, restore, and delete sites and to generate login links and set publish credentials.</div>
    
 
-
-
     
     <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
 <script>
@@ -643,7 +641,6 @@ $( document ).ready(function() {
 <div id="toc" class="toc"></div>
 
     
-
 
     
 
@@ -898,10 +895,7 @@ Every site has a unique domain. Each also has login credentials for users that h
 
     </tbody>
 </table>
-
-<div class="Notice type_info" role="alert">
-	<b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.
-</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
 
 <h2>
 <div class="Tag type_info">GET</div>
@@ -994,7 +988,7 @@ Every site has a unique domain. Each also has login credentials for users that h
             </span><span class="nt">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owner"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"site_id"</span><span class="p">:</span><span class="s2">"1234567889"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_id"</span><span class="p">:</span><span class="s2">"1234567890"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.anotherwebsite.com"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"site_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Another Site"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"brand_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -1172,7 +1166,7 @@ Every site has a unique domain. Each also has login credentials for users that h
 
 <p class="codeTitle">Example CURL request:</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site <span class="se">\</span>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/page <span class="se">\</span>
 -X POST <span class="se">\</span>
 -d <span class="s1">'{
         "domain": "test1234567890.com",
@@ -1674,13 +1668,15 @@ There is no response to a delete request.</p>
 
     <div class="tags">
         
-	        Tags<br />
+            Tags:<br/>
 	        
-	        
-				
+
+            
+
+                
+		        	<a href="tag_sites.html" class="btn btn-default navbar-btn cursorNorm tags-link" role="button">sites</a>
 		        
-		        	<a href="tag_sites.html" class="btn btn-default navbar-btn" role="button">sites</a>
-		        
+
 	        
         
     </div>
@@ -1696,7 +1692,7 @@ There is no response to a delete request.</p>
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Nov 8, 2017
+				 Site last generated: Nov 9, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

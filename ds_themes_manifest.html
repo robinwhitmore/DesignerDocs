@@ -38,9 +38,9 @@
 
 <div class="top-nav">
 
-  <a href="/" class="top-nav-item">
-    <img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" />
-  </a>
+	<div class="top-nav-item">
+		<img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" role="button" tabindex="0" alt="menu"/>
+	</div>
 
 	<div class="top-nav-item">
 		<img class="mobile-nav-btn" src="images/icons/mobile-menu.svg" alt="">
@@ -232,7 +232,7 @@
 
 				            
 					            <li class="NavLinkLi">
-					            	<a href="ds_themes_2.html" class="NavLink isSecondary">2. Apply Your Theme to a Test Site</a>
+					            	<a href="ds_themes_2.html" class="NavLink isSecondary">2. Apply YOur Theme to a Test Site</a>
 					            </li>
 				            
 
@@ -686,8 +686,6 @@ $("li.active").parents('li').toggleClass("active");
     <div class="summary">Metadata for a theme is contained in the manifest.json file, which lives in the root directory of the theme zip that you upload to Weebly.  Here you add functionality like responsiveness, color adjusting, and options like search and social icons.</div>
    
 
-
-
     
     <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
 <script>
@@ -716,7 +714,6 @@ $( document ).ready(function() {
 
     
 
-
     
 
   <h2 id="configure-theme-functionality">Configure Theme Functionality</h2>
@@ -732,14 +729,8 @@ $( document ).ready(function() {
 ​</li>
   <li><code class="highlighter-rouge">enableEditorJS</code>: Set to <code class="highlighter-rouge">true</code> if you want your theme to use JavaScript.
     <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Please be aware of the current <a href="ds_themes_issues.html">known issues</a> when enabling JavaScript.</div>
+    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> All URLs must use the HTTPS protocol.</div>
   </li>
-</ul>
-
-<div class="Notice type_info" role="alert">
-	<b>Note:</b> All URLs must use the HTTPS protocol.
-</div>
-
-<ul>
   <li>
     <p><code class="highlighter-rouge">responsive</code>: Set to <code class="highlighter-rouge">true</code> if your theme is responsive, <code class="highlighter-rouge">false</code> if not. The default is <code class="highlighter-rouge">false</code>.</p>
   </li>
@@ -808,18 +799,21 @@ $( document ).ready(function() {
 
     <div class="tags">
         
-	        Tags<br />
+            Tags:<br/>
 	        
+
+            
+
+                
+		        	<a href="tag_configuration.html" class="btn btn-default navbar-btn cursorNorm tags-link" role="button">configuration</a>
+		        
+
 	        
-				
+
+                
+		        	<a href="tag_themes.html" class="btn btn-default navbar-btn cursorNorm tags-link" role="button">themes</a>
 		        
-		        	<a href="tag_configuration.html" class="btn btn-default navbar-btn" role="button">configuration</a>
-		        
-	        
-				, 
-		        
-		        	<a href="tag_themes.html" class="btn btn-default navbar-btn" role="button">themes</a>
-		        
+
 	        
         
     </div>
@@ -835,7 +829,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Nov 8, 2017
+				 Site last generated: Nov 9, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

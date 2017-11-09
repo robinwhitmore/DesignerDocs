@@ -38,9 +38,9 @@
 
 <div class="top-nav">
 
-  <a href="/" class="top-nav-item">
-    <img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" />
-  </a>
+	<div class="top-nav-item">
+		<img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" role="button" tabindex="0" alt="menu"/>
+	</div>
 
 	<div class="top-nav-item">
 		<img class="mobile-nav-btn" src="images/icons/mobile-menu.svg" alt="">
@@ -232,7 +232,7 @@
 
 				            
 					            <li class="NavLinkLi">
-					            	<a href="ds_themes_2.html" class="NavLink isSecondary">2. Apply Your Theme to a Test Site</a>
+					            	<a href="ds_themes_2.html" class="NavLink isSecondary">2. Apply YOur Theme to a Test Site</a>
 					            </li>
 				            
 
@@ -686,8 +686,6 @@ $("li.active").parents('li').toggleClass("active");
     <div class="summary">If you're creating color palettes for your theme, then you may also want to create light and dark variations of each palette.</div>
    
 
-
-
     
     <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
 <script>
@@ -715,7 +713,6 @@ $( document ).ready(function() {
 <div id="toc" class="toc"></div>
 
     
-
 
     
 
@@ -932,18 +929,21 @@ For example, the dark blue variation might have a file named <code class="highli
 
     <div class="tags">
         
-	        Tags<br />
+            Tags:<br/>
 	        
+
+            
+
+                
+		        	<a href="tag_configuration.html" class="btn btn-default navbar-btn cursorNorm tags-link" role="button">configuration</a>
+		        
+
 	        
-				
+
+                
+		        	<a href="tag_themes.html" class="btn btn-default navbar-btn cursorNorm tags-link" role="button">themes</a>
 		        
-		        	<a href="tag_configuration.html" class="btn btn-default navbar-btn" role="button">configuration</a>
-		        
-	        
-				, 
-		        
-		        	<a href="tag_themes.html" class="btn btn-default navbar-btn" role="button">themes</a>
-		        
+
 	        
         
     </div>
@@ -959,7 +959,7 @@ For example, the dark blue variation might have a file named <code class="highli
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Nov 8, 2017
+				 Site last generated: Nov 9, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

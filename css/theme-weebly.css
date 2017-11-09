@@ -1,3 +1,13 @@
+/*
+888       888                   888      888
+888   o   888                   888      888
+888  d8b  888                   888      888
+888 d888b 888  .d88b.   .d88b.  88888b.  888 888  888
+888d88888b888 d8P  Y8b d8P  Y8b 888 "88b 888 888  888
+88888P Y88888 88888888 88888888 888  888 888 888  888
+8888P   Y8888 Y8b.     Y8b.     888 d88P 888 Y88b 888
+888P     Y888  "Y8888   "Y8888  88888P"  888  "Y88888 888 Y8b d88P "Y88P"
+*/
 /* New color */
 /* New color */
 a[data-toggle="tooltip"] { color: #649345; font-style: italic; cursor: default; }
@@ -254,6 +264,10 @@ a.Card .card-header { /*color: $color;*/ font-weight: 600; }
 .popover > .arrow, .popover > .arrow:after { position: absolute; display: block; width: 0; height: 0; border-color: #0000; border-style: solid; }
 
 .popover-content { padding: 8px 16px; }
+
+/* Tags -----------------------------------------------------------*/
+.tags .tags-link:after { content: ","; cursor: default; color: #003055; margin-right: 2px; }
+.tags .tags-link:only-child:after, .tags .tags-link:last-child:after { content: ''; }
 
 /* ORBIT EXTERNAL - OVERRIDES -----------------------------------------------------------*/
 /* orbit-exernal.css is generated from https://github.intern.weebly.net/weebly/orbit-3rd-party. It includes Orbit style rules applied to HTML elements.

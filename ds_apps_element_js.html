@@ -38,9 +38,9 @@
 
 <div class="top-nav">
 
-  <a href="/" class="top-nav-item">
-    <img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" />
-  </a>
+	<div class="top-nav-item">
+		<img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" role="button" tabindex="0" alt="menu"/>
+	</div>
 
 	<div class="top-nav-item">
 		<img class="mobile-nav-btn" src="images/icons/mobile-menu.svg" alt="">
@@ -610,8 +610,6 @@ $("li.active").parents('li').toggleClass("active");
     <div class="summary">Adding JavaScript to your element is easy, and allows for more powerful elements.</div>
    
 
-
-
     
     <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
 <script>
@@ -639,7 +637,6 @@ $( document ).ready(function() {
 <div id="toc" class="toc"></div>
 
     
-
 
     
 
@@ -698,9 +695,7 @@ $( document ).ready(function() {
     <span class="k">return</span> <span class="nx">myElement</span><span class="p">;</span>
 <span class="p">})</span> <span class="p">();</span></code></pre></figure>
 
-<div class="Notice type_info" role="alert">
-	<b>Note:</b> All URLs must use the HTTPS protocol.
-</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> All URLs must use the HTTPS protocol.</div>
 
 <h2 id="access-settings">Access Settings</h2>
 <p>Within your JavaScript, you can access element settings using <code class="highlighter-rouge">this.settings</code>, which acts as a <a href="http://backbonejs.org/#Model">Backbone Model</a>, and the <code class="highlighter-rouge">get</code> method.  Any settings that are defined as private in your <code class="highlighter-rouge">manifest.json</code> will not be available to your JavaScript on the published site.  This is for security reasons, and allows you to place API Keys in your settings without exposing them to site visitors.</p>
@@ -781,13 +776,15 @@ $( document ).ready(function() {
 
     <div class="tags">
         
-	        Tags<br />
+            Tags:<br/>
 	        
-	        
-				
+
+            
+
+                
+		        	<a href="tag_elements.html" class="btn btn-default navbar-btn cursorNorm tags-link" role="button">elements</a>
 		        
-		        	<a href="tag_elements.html" class="btn btn-default navbar-btn" role="button">elements</a>
-		        
+
 	        
         
     </div>
@@ -803,7 +800,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Nov 8, 2017
+				 Site last generated: Nov 9, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
