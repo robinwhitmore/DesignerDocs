@@ -18,7 +18,7 @@
 		}, 
 	
 		{
-			"title": "Blog API",
+			"title": "Blog APIs",
 			"tags": "sites",
 			"keywords": "blog",
 			"url": "ds_api_blog.html",
@@ -26,7 +26,7 @@
 		}, 
 	
 		{
-			"title": "Blog Post API",
+			"title": "Blog Post APIs",
 			"tags": "sites",
 			"keywords": "blog, blog post, post",
 			"url": "ds_api_blog_post.html",
@@ -34,7 +34,7 @@
 		}, 
 	
 		{
-			"title": "Category API",
+			"title": "Category APIs",
 			"tags": "sites",
 			"keywords": "category, categories",
 			"url": "ds_api_category.html",
@@ -42,7 +42,7 @@
 		}, 
 	
 		{
-			"title": "Category Image API",
+			"title": "Category Image APIs",
 			"tags": "sites",
 			"keywords": "category, categories, image,",
 			"url": "ds_api_category_image.html",
@@ -50,7 +50,7 @@
 		}, 
 	
 		{
-			"title": "Client API",
+			"title": "Client APIs",
 			"tags": "clients",
 			"keywords": "client",
 			"url": "ds_api_client.html",
@@ -58,7 +58,7 @@
 		}, 
 	
 		{
-			"title": "Client Site API",
+			"title": "Client Site APIs",
 			"tags": "clientssitesappselements",
 			"keywords": "client, site",
 			"url": "ds_api_client_site.html",
@@ -66,7 +66,7 @@
 		}, 
 	
 		{
-			"title": "Coupon API",
+			"title": "Coupon APIs",
 			"tags": "sites",
 			"keywords": "coupon, store, checkout",
 			"url": "ds_api_coupon.html",
@@ -74,7 +74,7 @@
 		}, 
 	
 		{
-			"title": "Form API",
+			"title": "Form APIs",
 			"tags": "sites",
 			"keywords": "forms",
 			"url": "ds_api_form.html",
@@ -82,7 +82,7 @@
 		}, 
 	
 		{
-			"title": "Form Entry API",
+			"title": "Form Entry APIs",
 			"tags": "sites",
 			"keywords": "forms, form entries, entries",
 			"url": "ds_api_form_entry.html",
@@ -90,7 +90,7 @@
 		}, 
 	
 		{
-			"title": "Group API",
+			"title": "Group APIs",
 			"tags": "sites",
 			"keywords": "member, membership, group,",
 			"url": "ds_api_group.html",
@@ -98,7 +98,7 @@
 		}, 
 	
 		{
-			"title": "Member API",
+			"title": "Member APIs",
 			"tags": "sites",
 			"keywords": "member, membership, login,",
 			"url": "ds_api_member.html",
@@ -106,7 +106,7 @@
 		}, 
 	
 		{
-			"title": "Order API",
+			"title": "Order APIs",
 			"tags": "sites",
 			"keywords": "store, order",
 			"url": "ds_api_order.html",
@@ -114,7 +114,7 @@
 		}, 
 	
 		{
-			"title": "Order Billing API",
+			"title": "Order Billing APIs",
 			"tags": "sites",
 			"keywords": "payment provider, payment, billing address, payment method, transactions",
 			"url": "ds_api_order_billing.html",
@@ -122,7 +122,7 @@
 		}, 
 	
 		{
-			"title": "Order Billing Transactions API",
+			"title": "Order Billing Transactions APIs",
 			"tags": "sites",
 			"keywords": "order, transaction, billing, invoice, order method, credit card",
 			"url": "ds_api_order_billing_transaction.html",
@@ -130,7 +130,7 @@
 		}, 
 	
 		{
-			"title": "Order Item API",
+			"title": "Order Item APIs",
 			"tags": "sites",
 			"keywords": "order, order item, sku",
 			"url": "ds_api_order_item.html",
@@ -138,7 +138,7 @@
 		}, 
 	
 		{
-			"title": "Order Shipment API",
+			"title": "Order Shipment APIs",
 			"tags": "sites",
 			"keywords": "shipping, tax, tracking",
 			"url": "ds_api_order_shipment.html",
@@ -146,7 +146,7 @@
 		}, 
 	
 		{
-			"title": "Order Shipment Transaction API",
+			"title": "Order Shipment Transaction APIs",
 			"tags": "sites",
 			"keywords": "shipment, transaction",
 			"url": "ds_api_order_shipment_transaction.html",
@@ -154,7 +154,7 @@
 		}, 
 	
 		{
-			"title": "Page API",
+			"title": "Page APIs",
 			"tags": "sites",
 			"keywords": "page, hidden, page order, layout, url",
 			"url": "ds_api_page.html",
@@ -162,7 +162,7 @@
 		}, 
 	
 		{
-			"title": "Plan API",
+			"title": "Plan APIs",
 			"tags": "plans",
 			"keywords": "plans, plan, page limit, terms",
 			"url": "ds_api_plan.html",
@@ -170,7 +170,7 @@
 		}, 
 	
 		{
-			"title": "Product API",
+			"title": "Product APIs",
 			"tags": "sites",
 			"keywords": "product, price, tax,",
 			"url": "ds_api_product.html",
@@ -178,7 +178,7 @@
 		}, 
 	
 		{
-			"title": "Product Image API",
+			"title": "Product Image APIs",
 			"tags": "sites",
 			"keywords": "image, format, product",
 			"url": "ds_api_product_image.html",
@@ -186,7 +186,7 @@
 		}, 
 	
 		{
-			"title": "Product Option API",
+			"title": "Product Option APIs",
 			"tags": "sites",
 			"keywords": "option, choice",
 			"url": "ds_api_product_option.html",
@@ -194,7 +194,7 @@
 		}, 
 	
 		{
-			"title": "Product SKU API",
+			"title": "Product SKU APIs",
 			"tags": "sites",
 			"keywords": "sku, option, choice",
 			"url": "ds_api_product_sku.html",
@@ -202,7 +202,7 @@
 		}, 
 	
 		{
-			"title": "Product SKU Option Choice API",
+			"title": "Product SKU Option Choice APIs",
 			"tags": "sites",
 			"keywords": "sku, option, choice,",
 			"url": "ds_api_product_sku_option_choice.html",
@@ -210,7 +210,7 @@
 		}, 
 	
 		{
-			"title": "Site API",
+			"title": "Site APIs",
 			"tags": "sites",
 			"keywords": "site, publish, unpublish, login, login link, credentials, restore, disable",
 			"url": "ds_api_site.html",
@@ -218,7 +218,7 @@
 		}, 
 	
 		{
-			"title": "Store API",
+			"title": "Store APIs",
 			"tags": "sites",
 			"keywords": "store, eCommerce",
 			"url": "ds_api_store.html",
@@ -226,7 +226,7 @@
 		}, 
 	
 		{
-			"title": "Team Member",
+			"title": "Team Member APIs",
 			"tags": "configuration",
 			"keywords": "user, contributor,",
 			"url": "ds_api_team_member.html",
@@ -234,7 +234,7 @@
 		}, 
 	
 		{
-			"title": "Themes (Custom) API",
+			"title": "Themes (Custom) APIs",
 			"tags": "themes",
 			"keywords": "themes",
 			"url": "ds_api_themes_cloud.html",
@@ -242,7 +242,7 @@
 		}, 
 	
 		{
-			"title": "Theme (User) API",
+			"title": "Theme (User) APIs",
 			"tags": "sitesthemes",
 			"keywords": "theme,",
 			"url": "ds_api_themes_user.html",
@@ -250,7 +250,7 @@
 		}, 
 	
 		{
-			"title": "User API",
+			"title": "User APIs",
 			"tags": "configurationsites",
 			"keywords": "user, login link, email",
 			"url": "ds_api_user.html",
@@ -259,7 +259,7 @@
 	
 		{
 			"title": "Create a Backend Service",
-			"tags": "getting_startedapps",
+			"tags": "apps",
 			"keywords": "backend, service, backend service, app, snippet, snippets",
 			"url": "ds_apps_backend.html",
 			"summary": "Backend services typically provide additional functionality for a user&#39;s website. They can be full-fledged apps that run on your server and access our API, or they can be simple snippets."
@@ -267,7 +267,7 @@
 	
 		{
 			"title": "Develop an App",
-			"tags": "getting_startedappscustom",
+			"tags": "appscustom",
 			"keywords": "apps, custom, steps, elements, backend, service",
 			"url": "ds_apps_dev.html",
 			"summary": "While there are two different types of apps (backend services and elements), they both have the same initial and final development steps. Start your development process by following the initial steps below. Then follow the development process for the type of app you&#39;re creating. Finish up by following the final steps, also below."
@@ -379,7 +379,7 @@
 	
 		{
 			"title": "What are Elements?",
-			"tags": "getting_startedelements",
+			"tags": "elements",
 			"keywords": "elements, settings, tutorial",
 			"url": "ds_apps_elements.html",
 			"summary": "​Elements are the widgets that users drag and drop from Weebly&#39;s Editor element tray to create HTML for the page. Users can create an entire web site using elements, without ever having to create any code themselves!"
@@ -387,7 +387,7 @@
 	
 		{
 			"title": "Create the App File Structure",
-			"tags": "getting_startedapps",
+			"tags": "apps",
 			"keywords": "directory, files, manifest",
 			"url": "ds_apps_files.html",
 			"summary": "The file structure for your app must be as Weebly expects in order for you to upload it to the App Center."
@@ -395,7 +395,7 @@
 	
 		{
 			"title": "Get Started with Custom Weebly Apps",
-			"tags": "getting_startedcustom_apps",
+			"tags": "getting_startedapps",
 			"keywords": "apps, custom, development site, elements, backend,",
 			"url": "ds_apps_gs.html",
 			"summary": ""
@@ -419,7 +419,7 @@
 	
 		{
 			"title": "Manage Your App",
-			"tags": "getting_startedapps",
+			"tags": "apps",
 			"keywords": "manage, apps, custom, status, version, developer site,",
 			"url": "ds_apps_manage.html",
 			"summary": "You manage your app(s) using the Cloud Admin. From here, you can do a number of different things like access your development site, install the app to your development site, release the app to a plan, and upload new versions."
@@ -435,7 +435,7 @@
 	
 		{
 			"title": "Register Your App",
-			"tags": "getting_startedappscustom",
+			"tags": "appscustom",
 			"keywords": "register, app, client ID,",
 			"url": "ds_apps_reg.html",
 			"summary": "You use the APPS tab of the Cloud Admin to register and manage your apps."
@@ -443,7 +443,7 @@
 	
 		{
 			"title": "Sample Applications",
-			"tags": "getting_startedcustom_apps",
+			"tags": "apps",
 			"keywords": "bootstrap, pricing chart, git hub, examples",
 			"url": "ds_apps_samples.html",
 			"summary": "This page contains downloadable sample application bundles. Feel free to download, inspect, and modify any of these applications. Each application comes in a working state, and can be downloaded and immediately uploaded into your developer account."
@@ -531,7 +531,7 @@
 	
 		{
 			"title": "Tutorial&amp;#58; Create an Element",
-			"tags": "getting_startedcustom_apps",
+			"tags": "apps",
 			"keywords": "price chart, tutorial, custom",
 			"url": "ds_element_main.html",
 			"summary": ""
@@ -579,7 +579,7 @@
 	
 		{
 			"title": "Create and Manage Clients",
-			"tags": "getting_startedtroubleshootingconfigurationclientsplanssites",
+			"tags": "getting_startedclientssites",
 			"keywords": "clients, admin, configure,",
 			"url": "ds_gs_clients.html",
 			"summary": "You create and manage your clients in the Cloud Admin. Along with contact information, you can manage a client&#39;s sites and their access to functionality on those sites."
@@ -603,7 +603,7 @@
 	
 		{
 			"title": "View and Pay Weebly Invoices",
-			"tags": "getting_startedclients",
+			"tags": "clients",
 			"keywords": "invoices, clients, bills, billing",
 			"url": "ds_gs_invoice.html",
 			"summary": "Cloud Admin has a Billing tab that displays your current Weebly invoices. You can view the details of those invoices and download the current activity. You can also pay invoices from here."
@@ -611,7 +611,7 @@
 	
 		{
 			"title": "Market to Your Customers in Weebly",
-			"tags": "getting_startedsites",
+			"tags": "sites",
 			"keywords": "sites, publish, publish modal",
 			"url": "ds_gs_market.html",
 			"summary": "When a user publishes their site, the Weebly Editor displays a modal. You can customize this modal window by supplying a URL to other content."
@@ -635,7 +635,7 @@
 	
 		{
 			"title": "Allow Sites to Use SSL",
-			"tags": "getting_startedconfigurationsites",
+			"tags": "configurationsites",
 			"keywords": "ssl, sites",
 			"url": "ds_gs_ssl.html",
 			"summary": "Weebly sites can use SSL, as long as they are on the Weebly Business plan. However, you&#39;ll need to use the Weebly Cloud API to enable the SSL option to display in the Site&#39;s settings so that the site owner can enable it."
@@ -651,7 +651,7 @@
 	
 		{
 			"title": "Troubleshooting Weebly Cloud",
-			"tags": "troubleshootingconfiguration",
+			"tags": "troubleshooting",
 			"keywords": "trouble, email, invitation, SPF, IP, domain",
 			"url": "ds_gs_trouble.html",
 			"summary": "​Following are common issues and their resolutions."
@@ -659,7 +659,7 @@
 	
 		{
 			"title": "Handle Site Upgrades",
-			"tags": "getting_startedplanssites",
+			"tags": "planssites",
 			"keywords": "sites, upgrades, plans",
 			"url": "ds_gs_upgrades.html",
 			"summary": "Plans determine what functionality a site has. If you try to access functionality not supported by the plan, a popup displays information about upgrading. If you expect your clients to be using the Weebly Editor, you need to provide the content for this popup and you need to handle the upgrade process. If clients won&#39;t be using the editor, you&#39;ll be shown the standard Weebly dialog."
@@ -675,7 +675,7 @@
 	
 		{
 			"title": "Setting Up Your Account",
-			"tags": "getting_startedconfiguration",
+			"tags": "configuration",
 			"keywords": "account, email, migration",
 			"url": "ds_mg_account.html",
 			"summary": "This topic shows how to edit your account information."
@@ -691,7 +691,7 @@
 	
 		{
 			"title": "Controlling Access to a Site",
-			"tags": "getting_startedclientssites",
+			"tags": "clientssites",
 			"keywords": "access, site, migrating, staff, team, migration",
 			"url": "ds_mg_control.html",
 			"summary": "This topic shows how to control client and staff access to sites."
@@ -699,7 +699,7 @@
 	
 		{
 			"title": "Configuring the Company Portal",
-			"tags": "getting_startedconfiguration",
+			"tags": "configuration",
 			"keywords": "migration, portal, contacts, brand, urls, settings",
 			"url": "ds_mg_portal.html",
 			"summary": "This topic describes how to configure UI settings the Cloud Admin and the User Portal like contact info and branding."
@@ -707,7 +707,7 @@
 	
 		{
 			"title": "Retired Features",
-			"tags": "getting_startedtroubleshooting",
+			"tags": "troubleshooting",
 			"keywords": "migration, retired",
 			"url": "ds_mg_retired.html",
 			"summary": "This topic lists features from the Designer Platform that don&#39;t exist in Cloud Admin."
@@ -715,7 +715,7 @@
 	
 		{
 			"title": "Working with Sites",
-			"tags": "getting_startedclientssites",
+			"tags": "clientssites",
 			"keywords": "migration, sites",
 			"url": "ds_mg_sites.html",
 			"summary": "This topic shows how to create and manage sites in the Cloud Admin."
@@ -723,7 +723,7 @@
 	
 		{
 			"title": "Working with Staff",
-			"tags": "getting_started",
+			"tags": "",
 			"keywords": "migration, staff, team member",
 			"url": "ds_mg_staff.html",
 			"summary": "This topic explains how you create and manage your staff, now called Team Members."
@@ -731,7 +731,7 @@
 	
 		{
 			"title": "Getting Support",
-			"tags": "getting_startedtroubleshooting",
+			"tags": "troubleshooting",
 			"keywords": "support, migration",
 			"url": "ds_mg_support.html",
 			"summary": "This topic shows how to get support from the Cloud Admin"
@@ -742,7 +742,7 @@
 			"tags": "",
 			"keywords": "",
 			"url": "ds_tags_about.html",
-			"summary": "Use topics to find articles based on subject matter.."
+			"summary": "Click a topic card to find articles based on subject matter."
 		}, 
 	
 		{
@@ -835,7 +835,7 @@
 	
 		{
 			"title": "Anatomy of a Theme",
-			"tags": "getting_startedthemes",
+			"tags": "themes",
 			"keywords": "template, layout, css, less, js, javascript,",
 			"url": "ds_themes_anatomy.html",
 			"summary": "When creating themes, you&#39;ll be working with HTML pages, mustache templates, JavaScript, cascading style sheets (CSS or LESS), images, and manifest files. This may sound like a lot, but once you understand how all the pieces fit together, you&#39;ll realize there&#39;s not much to it!"
@@ -859,7 +859,7 @@
 	
 		{
 			"title": "How to Create a Theme",
-			"tags": "getting_startedthemes",
+			"tags": "themes",
 			"keywords": "theme, steps, procedure",
 			"url": "ds_themes_create.html",
 			"summary": "The best way to create a theme is start with an existing theme and change it as you need."
@@ -891,7 +891,7 @@
 	
 		{
 			"title": "Theme Directory Structure",
-			"tags": "getting_startedthemes",
+			"tags": "themes",
 			"keywords": "directory, folders, assets, manifest",
 			"url": "ds_themes_directory.html",
 			"summary": "If you will edit your theme using the Weebly Code Editor, the directories and files are created for you remotely. If you want to use another editor, follow these guidelines to set up your development directory."
@@ -923,7 +923,7 @@
 	
 		{
 			"title": "Customize Weebly Themes",
-			"tags": "getting_startedsitesthemescustom",
+			"tags": "sitesthemescustom",
 			"keywords": "themes, sites, custom",
 			"url": "ds_[X].html",
 			"summary": ""
@@ -987,7 +987,7 @@
 	
 		{
 			"title": "Add Options to Your Theme",
-			"tags": "themesconfiguration",
+			"tags": "themes",
 			"keywords": "options, toggle, dropdown, body class",
 			"url": "ds_themes_options.html",
 			"summary": "You can design your theme so that some aspects of it can be globally changed. For example, you might want site owners to be able to turn search off and on, or determine how to align the menu. Or you might want them to be able to change the color or size of something. These choices are created with options and controlled with styles."
@@ -1003,7 +1003,7 @@
 	
 		{
 			"title": "Create a Color Palette",
-			"tags": "configurationthemes",
+			"tags": "themes",
 			"keywords": "color palette, eyedropper, accent color, primary color, variables, LESS variables, LESS, manifest,",
 			"url": "ds_themes_palette.html",
 			"summary": "You can create a color palette for your theme that allows the user to select a primary and an accent color for the site."
@@ -1019,7 +1019,7 @@
 	
 		{
 			"title": "Download Sample Themes",
-			"tags": "getting_startedthemes",
+			"tags": "themes",
 			"keywords": "samples, themes, github",
 			"url": "ds_themes_sample.html",
 			"summary": "Use our Base theme to get started creating your own custom theme."
@@ -1051,7 +1051,7 @@
 	
 		{
 			"title": "Tutorial&amp;#58; Customize a Weebly Theme",
-			"tags": "getting_startedthemes",
+			"tags": "themes",
 			"keywords": "tutorial, themes, custom",
 			"url": "ds_themes_tutorial.html",
 			"summary": ""
@@ -1067,7 +1067,7 @@
 	
 		{
 			"title": "Add Color Variations",
-			"tags": "configurationthemes",
+			"tags": "themes",
 			"keywords": "color, color variations, light, dark, is_dark, LESS, css",
 			"url": "ds_themes_variations.html",
 			"summary": "If you&#39;re creating color palettes for your theme, then you may also want to create light and dark variations of each palette."
@@ -1147,7 +1147,7 @@
 	
 		{
 			"title": "Get Started with Weebly Cloud for Designers",
-			"tags": "getting_startedapps",
+			"tags": "getting_started",
 			"keywords": "get started, test mode, editor, code, apps, themes, custom,",
 			"url": "home.html",
 			"summary": "Welcome to Weebly Cloud for Designers! With Weebly Cloud, you use Weebly’s best-in-class website builder to create websites, blogs or online stores in minutes for your clients, and the Cloud Admin to maintain full control over billing, support, and the customer relationship."
